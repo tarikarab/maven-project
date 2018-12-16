@@ -8,7 +8,7 @@ pipeline {
                 sh 'mvn clean package'
                 sh 'pwd'
                 sh 'users'
-                sh "sudo docker build . -t tomcatwebapp:${env.BUILD_ID}"
+                sh "docker build . -t tomcatwebapp:${env.BUILD_ID}"
             }
             post {
                 success {
